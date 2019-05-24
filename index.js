@@ -91,5 +91,12 @@ const [file, operation] = process.argv.slice(2);
 
 let bitmap = new Bitmap(file);
 
-transformWithCallbacks();
+if (!module.parent) {
+  // TODO: Explain how this works (in your README)
+  transformWithCallbacks();
+}
 
+module.exports = {
+  Bitmap,
+  transformGreyscale,
+};
