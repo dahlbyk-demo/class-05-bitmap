@@ -37,7 +37,7 @@ Bitmap.prototype.parse = function(buffer) {
 Bitmap.prototype.transform = function(operation) {
   // This is really assumptive and unsafe
   transforms[operation](this);
-  this.newFile = this.file.replace(/\.bmp/, `.${operation}.bmp`);
+  this.newFile = this.file.replace(/\.bmp/, `.${operation}.transform.bmp`);
 };
 
 /**
